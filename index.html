@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Juan Medina | Estudiante de Desarrollo de Software</title>
+  <!-- Tipografía formal y moderna desde Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Tailwind CSS vía CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'selector',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-slate-50 font-sans text-slate-900 antialiased transition-colors duration-300 selection:bg-blue-600 selection:text-white dark:bg-[#070d19] dark:text-slate-100">
+
+  <!-- ================= ENCABEZADO Y NAVEGACIÓN ================= -->
+  <header class="sticky top-0 z-40 border-b border-slate-200 bg-white/90 backdrop-blur-md transition-colors duration-300 dark:border-blue-900/50 dark:bg-[#070d19]/90">
+    <div class="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
+      
+      <!-- Identificador / Marca personal -->
+      <a href="#inicio" class="flex items-center gap-2.5 text-base font-semibold tracking-tight text-[#0c1d3d] transition-colors dark:text-white">
+        <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-[#0c1d3d] text-sm font-bold text-white dark:bg-blue-900/80 dark:text-blue-300 dark:ring-1 dark:ring-blue-700/60">
+          JM
+        </span>
+        <span>Juan Medina</span>
+      </a>
+
+      <!-- Navegación principal -->
+      <nav aria-label="Navegación principal" class="order-3 flex w-full items-center justify-center gap-5 border-t border-slate-200 pt-3 text-sm font-medium text-slate-600 sm:order-2 sm:w-auto sm:border-0 sm:pt-0 md:gap-7 dark:border-blue-900/40 dark:text-slate-300">
+        <a href="#sobre-mi" class="transition-colors hover:text-blue-700 dark:hover:text-blue-400">Sobre mí</a>
+        <a href="#tecnologias" class="transition-colors hover:text-blue-700 dark:hover:text-blue-400">Tecnologías</a>
+        <a href="#proyectos" class="transition-colors hover:text-blue-700 dark:hover:text-blue-400">Proyectos</a>
+        <a href="#contacto" class="transition-colors hover:text-blue-700 dark:hover:text-blue-400">Contacto</a>
+      </nav>
+
+      <!-- Interruptor manual de Modo Claro / Modo Oscuro -->
+      <button type="button" id="theme-toggle" aria-label="Alternar entre modo oscuro y modo claro" class="order-2 inline-flex cursor-pointer items-center gap-2 rounded-lg border border-slate-300 bg-slate-100 px-3 py-1.5 text-xs font-medium text-slate-800 transition hover:bg-slate-200 sm:order-3 dark:border-blue-800/70 dark:bg-blue-950/60 dark:text-blue-200 dark:hover:border-blue-600 dark:hover:bg-blue-900/60">
+        <!-- Icono de Sol (visible en modo oscuro para cambiar a claro) -->
+        <svg class="hidden h-4 w-4 text-amber-300 dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m8.66-13.66l-.71.71M4.05 19.95l-.71.71M21 12h-1M4 12H3m16.95 7.95l-.71-.71M4.05 4.05l-.71-.71M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+        <!-- Icono de Luna (visible en modo claro para cambiar a oscuro) -->
+        <svg class="block h-4 w-4 text-slate-700 dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+        </svg>
+        <span class="dark:hidden">Modo oscuro</span>
+        <span class="hidden dark:inline">Modo claro</span>
+      </button>
+
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= A. SECCIÓN INICIO (HERO) ================= -->
+    <section id="inicio" class="border-b border-slate-200 py-16 sm:py-24 lg:py-28 dark:border-blue-950/80">
+      <div class="mx-auto grid max-w-5xl grid-cols-1 items-center gap-10 px-4 sm:px-6 lg:grid-cols-12 lg:gap-12 lg:px-8">
+        
+        <!-- Columna de texto principal -->
+        <div class="lg:col-span-7">
+          <p class="mb-3 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-3.5 py-1 text-xs font-medium text-blue-800 dark:border-blue-800/60 dark:bg-blue-950/70 dark:text-blue-300">
+            <span class="h-2 w-2 rounded-full bg-blue-600 dark:bg-blue-400"></span>
+            Formación en Desarrollo de Software · Riwi
+          </p>
+
+          <h1 class="text-3xl font-bold tracking-tight text-[#0a1933] sm:text-4xl lg:text-5xl dark:text-white">
+            Juan Medina
+          </h1>
+
+          <p class="mt-2 text-lg font-medium text-blue-700 sm:text-xl dark:text-blue-300">
+            Estudiante de Desarrollo de Software
+          </p>
+
+          <p class="mt-5 max-w-xl text-base leading-relaxed text-slate-600 dark:text-slate-300">
+            Construyo interfaces web estructuradas, responsivas y limpias mientras consolido mis bases en programación, control de versiones y diseño front-end a través de proyectos académicos.
+          </p>
+
+          <div class="mt-8 flex flex-wrap items-center gap-4">
+            <a href="#proyectos" class="inline-flex items-center justify-center rounded-lg bg-[#0c1d3d] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-50 dark:bg-blue-600 dark:hover:bg-blue-500 dark:focus:ring-blue-400 dark:focus:ring-offset-[#070d19]">
+              Explorar proyectos
+            </a>
+            <a href="#contacto" class="inline-flex items-center justify-center rounded-lg border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-100 dark:border-blue-800/80 dark:bg-blue-950/40 dark:text-slate-200 dark:hover:border-blue-600 dark:hover:bg-blue-900/40">
+              Contacto
+            </a>
+          </div>
+        </div>
+
+        <!-- Composición visual sobria y geométrica -->
+        <div class="lg:col-span-5">
+          <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-blue-900/60 dark:bg-[#0b1528] dark:shadow-lg">
+            <div class="mb-4 flex items-center justify-between border-b border-slate-100 pb-3 dark:border-blue-900/50">
+              <div class="flex items-center gap-1.5">
+                <span class="h-2.5 w-2.5 rounded-full bg-slate-300 dark:bg-blue-700"></span>
+                <span class="h-2.5 w-2.5 rounded-full bg-slate-300 dark:bg-blue-600"></span>
+                <span class="h-2.5 w-2.5 rounded-full bg-blue-600 dark:bg-blue-400"></span>
+              </div>
+              <span class="text-xs font-medium text-slate-500 dark:text-slate-400">perfil_estudiante.html</span>
+            </div>
+
+            <dl class="space-y-3.5 text-sm">
+              <div class="flex justify-between gap-4">
+                <dt class="text-slate-500 dark:text-slate-400">Rol actual</dt>
+                <dd class="font-medium text-slate-800 dark:text-slate-100">Estudiante de Software</dd>
+              </div>
+              <div class="flex justify-between gap-4">
+                <dt class="text-slate-500 dark:text-slate-400">Institución</dt>
+                <dd class="font-medium text-slate-800 dark:text-slate-100">Riwi</dd>
+              </div>
+              <div class="flex justify-between gap-4">
+                <dt class="text-slate-500 dark:text-slate-400">Idiomas</dt>
+                <dd class="font-medium text-slate-800 dark:text-slate-100">Español · Inglés</dd>
+              </div>
+              <div class="flex justify-between gap-4">
+                <dt class="text-slate-500 dark:text-slate-400">Enfoque</dt>
+                <dd class="font-medium text-blue-700 dark:text-blue-300">HTML5 · Tailwind · Bootstrap</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= B. SECCIÓN SOBRE MÍ ================= -->
+    <section id="sobre-mi" class="border-b border-slate-200 py-16 sm:py-20 dark:border-blue-950/80">
+      <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div class="mb-10">
+          <h2 class="text-2xl font-bold tracking-tight text-[#0a1933] sm:text-3xl dark:text-white">
+            Sobre mí
+          </h2>
+          <p class="mt-2 text-sm text-blue-700 dark:text-blue-300">
+            Formación académica, pensamiento lógico y proceso de aprendizaje
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+          <!-- Tarjeta 1: Formación e interés -->
+          <article class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-blue-900/50 dark:bg-[#0b1528]/80 dark:shadow-none">
+            <h3 class="text-base font-semibold text-[#0c1d3d] dark:text-white">
+              Formación académica e interés
+            </h3>
+            <p class="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+              Actualmente estudio desarrollo de software y programación en <strong class="font-semibold text-blue-800 dark:text-blue-300">Riwi</strong>. Mi interés por esta área nace del gusto por las matemáticas, el ajedrez y la resolución de retos lógicos, aplicando el pensamiento analítico para estructurar soluciones web ordenadas.
+            </p>
+          </article>
+
+          <!-- Tarjeta 2: Aprendizaje y objetivos -->
+          <article class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-blue-900/50 dark:bg-[#0b1528]/80 dark:shadow-none">
+            <h3 class="text-base font-semibold text-[#0c1d3d] dark:text-white">
+              Proceso de aprendizaje y objetivos
+            </h3>
+            <p class="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+              Complemento mi formación técnica con el dominio del idioma <strong class="font-semibold text-blue-800 dark:text-blue-300">inglés</strong> para acceder a documentación oficial y buenas prácticas. Mi objetivo profesional es seguir fortaleciendo mis fundamentos de programación para aportar en equipos de desarrollo con código limpio y mantenible.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= C. TECNOLOGÍAS Y CONOCIMIENTOS ================= -->
+    <section id="tecnologias" class="border-b border-slate-200 py-16 sm:py-20 dark:border-blue-950/80">
+      <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div class="mb-10">
+          <h2 class="text-2xl font-bold tracking-tight text-[#0a1933] sm:text-3xl dark:text-white">
+            Tecnologías y conocimientos
+          </h2>
+          <p class="mt-2 text-sm text-blue-700 dark:text-blue-300">
+            Herramientas y lenguajes utilizados en mis proyectos académicos
+          </p>
+        </div>
+
+        <ul class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+          <li class="rounded-xl border border-slate-200 bg-white p-4 text-center shadow-sm transition hover:border-blue-400 dark:border-blue-900/50 dark:bg-[#0b1528] dark:shadow-none dark:hover:border-blue-700">
+            <span class="block text-sm font-semibold text-[#0c1d3d] dark:text-white">HTML5</span>
+            <span class="mt-1 block text-xs text-slate-500 dark:text-slate-400">Estructura semántica</span>
+          </li>
+
+          <li class="rounded-xl border border-slate-200 bg-white p-4 text-center shadow-sm transition hover:border-blue-400 dark:border-blue-900/50 dark:bg-[#0b1528] dark:shadow-none dark:hover:border-blue-700">
+            <span class="block text-sm font-semibold text-[#0c1d3d] dark:text-white">CSS3</span>
+            <span class="mt-1 block text-xs text-slate-500 dark:text-slate-400">Estilos y diseño visual</span>
+          </li>
+
+          <li class="rounded-xl border border-slate-200 bg-white p-4 text-center shadow-sm transition hover:border-blue-400 dark:border-blue-900/50 dark:bg-[#0b1528] dark:shadow-none dark:hover:border-blue-700">
+            <span class="block text-sm font-semibold text-[#0c1d3d] dark:text-white">Tailwind CSS</span>
+            <span class="mt-1 block text-xs text-slate-500 dark:text-slate-400">Utilidades y responsive</span>
+          </li>
+
+          <li class="rounded-xl border border-slate-200 bg-white p-4 text-center shadow-sm transition hover:border-blue-400 dark:border-blue-900/50 dark:bg-[#0b1528] dark:shadow-none dark:hover:border-blue-700">
+            <span class="block text-sm font-semibold text-[#0c1d3d] dark:text-white">Bootstrap</span>
+            <span class="mt-1 block text-xs text-slate-500 dark:text-slate-400">Grillas y componentes</span>
+          </li>
+
+          <li class="col-span-2 rounded-xl border border-slate-200 bg-white p-4 text-center shadow-sm transition hover:border-blue-400 sm:col-span-1 dark:border-blue-900/50 dark:bg-[#0b1528] dark:shadow-none dark:hover:border-blue-700">
+            <span class="block text-sm font-semibold text-[#0c1d3d] dark:text-white">Git</span>
+            <span class="mt-1 block text-xs text-slate-500 dark:text-slate-400">Control de versiones</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= D. PROYECTOS ACADÉMICOS ================= -->
+    <section id="proyectos" class="border-b border-slate-200 py-16 sm:py-20 dark:border-blue-950/80">
+      <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div class="mb-10">
+          <h2 class="text-2xl font-bold tracking-tight text-[#0a1933] sm:text-3xl dark:text-white">
+            Proyectos académicos
+          </h2>
+          <p class="mt-2 text-sm text-blue-700 dark:text-blue-300">
+            Actividades prácticas desarrolladas durante mi proceso de formación
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          
+          <!-- PROYECTO 1: Tailwind CSS (Tailwear) -->
+          <article class="flex flex-col justify-between rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition hover:border-blue-300 dark:border-blue-900/60 dark:bg-[#0b1528] dark:shadow-none dark:hover:border-blue-700">
+            <div>
+              <!-- Vista previa del proyecto Tailwear -->
+              <div class="mb-5 h-36 overflow-hidden rounded-lg border border-slate-200 bg-slate-100 dark:border-blue-900/50 dark:bg-[#070d19]">
+                <img
+                  src="./img/tailwear.png.png"
+                  alt="Vista previa del proyecto Tailwear"
+                  class="h-full w-full object-cover object-top"
+                />
+              </div>
+
+              <h3 class="text-lg font-bold text-[#0c1d3d] dark:text-white">
+                Tailwear
+              </h3>
+
+              <p class="mt-2.5 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+                Sitio web multipágina para una marca de ropa, estructurado e impulsado con Tailwind CSS. Incluye vistas de colecciones, sistema visual documentado y lógica básica de carrito y validación.
+              </p>
+
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700 dark:bg-blue-950/90 dark:text-blue-200">HTML5</span>
+                <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700 dark:bg-blue-950/90 dark:text-blue-200">Tailwind CSS</span>
+                <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700 dark:bg-blue-950/90 dark:text-blue-200">JavaScript</span>
+              </div>
+            </div>
+
+            <div class="mt-6 flex flex-col gap-2.5 border-t border-slate-100 pt-4 sm:flex-row dark:border-blue-900/40">
+              <a href="https://github.com/Tailwear/tailwear.git" target="_blank" rel="noopener noreferrer" class="inline-flex flex-1 items-center justify-center rounded-lg border border-slate-300 bg-white px-3.5 py-2 text-xs font-semibold text-slate-800 transition hover:bg-slate-100 dark:border-blue-800 dark:bg-blue-950/50 dark:text-slate-100 dark:hover:border-blue-600 dark:hover:bg-blue-900/50">
+                Repositorio GitHub
+              </a>
+              <a href="https://tailwear.github.io/tailwear/" target="_blank" rel="noopener noreferrer" class="inline-flex flex-1 items-center justify-center rounded-lg bg-[#0c1d3d] px-3.5 py-2 text-xs font-semibold text-white transition hover:bg-blue-900 dark:bg-blue-600 dark:hover:bg-blue-500">
+                Ver proyecto
+              </a>
+            </div>
+          </article>
+
+          <!-- PROYECTO 2: Bootstrap (Rueda Libre) -->
+          <article class="flex flex-col justify-between rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition hover:border-blue-300 dark:border-blue-900/60 dark:bg-[#0b1528] dark:shadow-none dark:hover:border-blue-700">
+            <div>
+              <!-- Vista previa del proyecto Rueda Libre -->
+              <div class="mb-5 h-36 overflow-hidden rounded-lg border border-slate-200 bg-slate-100 dark:border-blue-900/50 dark:bg-[#070d19]">
+                <img
+                  src="img/rueda-libre.png.png"
+                  alt="Vista previa del proyecto Rueda Libre"
+                  class="h-full w-full object-cover object-top"
+                />
+              </div>
+
+              <h3 class="text-lg font-bold text-[#0c1d3d] dark:text-white">
+                Rueda Libre
+              </h3>
+
+              <p class="mt-2.5 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+                Aplicación web para alquiler de bicicletas en Medellín. Organizada en múltiples páginas (inicio y sección de reservas) utilizando el sistema de grillas y componentes responsivos de Bootstrap.
+              </p>
+
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700 dark:bg-blue-950/90 dark:text-blue-200">HTML5</span>
+                <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700 dark:bg-blue-950/90 dark:text-blue-200">CSS3</span>
+                <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700 dark:bg-blue-950/90 dark:text-blue-200">Bootstrap</span>
+              </div>
+            </div>
+
+            <div class="mt-6 flex flex-col gap-2.5 border-t border-slate-100 pt-4 sm:flex-row dark:border-blue-900/40">
+              <a href="https://github.com/juanjose-alt/rueda-libre.git" target="_blank" rel="noopener noreferrer" class="inline-flex flex-1 items-center justify-center rounded-lg border border-slate-300 bg-white px-3.5 py-2 text-xs font-semibold text-slate-800 transition hover:bg-slate-100 dark:border-blue-800 dark:bg-blue-950/50 dark:text-slate-100 dark:hover:border-blue-600 dark:hover:bg-blue-900/50">
+                Repositorio GitHub
+              </a>
+              <a href="https://juanjose-alt.github.io/rueda-libre/index.html" target="_blank" rel="noopener noreferrer" class="inline-flex flex-1 items-center justify-center rounded-lg bg-[#0c1d3d] px-3.5 py-2 text-xs font-semibold text-white transition hover:bg-blue-900 dark:bg-blue-600 dark:hover:bg-blue-500">
+                Ver proyecto
+              </a>
+            </div>
+          </article>
+
+          <!-- PROYECTO 3: Página web con Inteligencia Artificial (Web Shop IA) -->
+          <article class="flex flex-col justify-between rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition hover:border-blue-300 md:col-span-2 lg:col-span-1 dark:border-blue-900/60 dark:bg-[#0b1528] dark:shadow-none dark:hover:border-blue-700">
+            <div>
+              <!-- Vista previa del proyecto Web Shop IA -->
+              <div class="mb-5 h-36 overflow-hidden rounded-lg border border-slate-200 bg-slate-100 dark:border-blue-900/50 dark:bg-[#070d19]">
+                <img
+                  src="./img/shop-ia.webp.webp"
+                  alt="Vista previa del proyecto Web Shop IA"
+                  class="h-full w-full object-cover object-top"
+                />
+              </div>
+
+              <h3 class="text-lg font-bold text-[#0c1d3d] dark:text-white">
+                Web Shop IA
+              </h3>
+
+              <p class="mt-2.5 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+                Página web de comercio electrónico desarrollada con apoyo de inteligencia artificial. Cuenta con estructura de vistas en inglés y español (<code class="text-xs">index.html</code> y <code class="text-xs">es.html</code>) estilizada con Tailwind CSS.
+              </p>
+
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700 dark:bg-blue-950/90 dark:text-blue-200">HTML5</span>
+                <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700 dark:bg-blue-950/90 dark:text-blue-200">Tailwind CSS</span>
+                <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700 dark:bg-blue-950/90 dark:text-blue-200">Inteligencia Artificial</span>
+              </div>
+            </div>
+
+            <div class="mt-6 flex flex-col gap-2.5 border-t border-slate-100 pt-4 sm:flex-row dark:border-blue-900/40">
+              <a href="https://github.com/juanjose-alt/IA-.git" target="_blank" rel="noopener noreferrer" class="inline-flex flex-1 items-center justify-center rounded-lg border border-slate-300 bg-white px-3.5 py-2 text-xs font-semibold text-slate-800 transition hover:bg-slate-100 dark:border-blue-800 dark:bg-blue-950/50 dark:text-slate-100 dark:hover:border-blue-600 dark:hover:bg-blue-900/50">
+                Repositorio GitHub
+              </a>
+              <a href="https://tailwear-after-dark.lovable.app/" target="_blank" rel="noopener noreferrer" class="inline-flex flex-1 items-center justify-center rounded-lg bg-[#0c1d3d] px-3.5 py-2 text-xs font-semibold text-white transition hover:bg-blue-900 dark:bg-blue-600 dark:hover:bg-blue-500">
+                Ver proyecto
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= E. SECCIÓN CONTACTO ================= -->
+    <section id="contacto" class="py-16 sm:py-20">
+      <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div class="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm sm:p-10 dark:border-blue-900/60 dark:bg-[#0b1528] dark:shadow-none">
+          <div class="max-w-2xl">
+            <h2 class="text-2xl font-bold tracking-tight text-[#0a1933] sm:text-3xl dark:text-white">
+              Contacto
+            </h2>
+            <p class="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+              Si deseas revisar mi código, conversar sobre desarrollo de software o compartir oportunidades de aprendizaje, puedes comunicarte directamente a través de mis canales oficiales.
+            </p>
+          </div>
+
+          <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+            <!-- Correo electrónico -->
+            <a href="mailto:juanjoselearning@gmail.com" class="inline-flex items-center justify-center gap-2.5 rounded-lg bg-[#0c1d3d] px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-900 dark:bg-blue-600 dark:hover:bg-blue-500">
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <span>juanjoselearning@gmail.com</span>
+            </a>
+
+            <!-- Perfil de GitHub -->
+            <a href="https://github.com/juanjose-alt" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2.5 rounded-lg border border-slate-300 bg-slate-50 px-5 py-3 text-sm font-semibold text-slate-800 transition hover:bg-slate-100 dark:border-blue-800 dark:bg-blue-950/60 dark:text-slate-100 dark:hover:border-blue-600 dark:hover:bg-blue-900/60">
+              <svg class="h-4 w-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+              </svg>
+              <span>github.com/juanjose-alt</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= PIE DE PÁGINA ================= -->
+  <footer class="border-t border-slate-200 py-8 text-center text-xs text-slate-500 dark:border-blue-950/80 dark:text-slate-400">
+    <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+      <p>Juan Medina · Estudiante de Desarrollo de Software (Riwi)</p>
+      <p class="mt-1">Desarrollado con HTML5 semántico y Tailwind CSS</p>
+    </div>
+  </footer>
+
+  <!-- Script mínimo indispensable (4 líneas) para alternar la clase 'dark' en <html> -->
+  <script>
+    document.getElementById('theme-toggle').addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+    });
+  </script>
+</body>
+</html>
