@@ -1,3 +1,9 @@
+Estructura de archivos 
+
 portafolio-juan-medina/
-├── index.html
-└── README.md
+├── img/
+│   ├── rueda-libre.png   # Vista previa del proyecto Rueda Libre
+│   ├── shop-ia.webp      # Vista previa del proyecto Web Shop IA
+│   └── tailwear.png      # Vista previa del proyecto Tailwear
+├── index.html            # Página principal con todas las secciones y estilos Tailwind
+└── README.md             # Documentación técnica y guía del proyecto
